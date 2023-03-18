@@ -20,3 +20,6 @@
 
 ## Day 11
 <img width="433" alt="image" src="https://user-images.githubusercontent.com/115053126/226088138-69d66559-105c-4012-8515-3b823baf619b.png">
+
+## Day 12
+<img width="311" alt="image" src="https://user-images.githubusercontent.com/115053126/226092721-3f621012-714e-4d30-b165-39e2b27c2ef5.png">
