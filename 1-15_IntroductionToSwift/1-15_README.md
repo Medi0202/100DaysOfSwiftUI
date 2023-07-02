@@ -15,7 +15,19 @@ Day 13 – protocols, extensions, and checkpoint 8
 Day 14 – optionals, nil coalescing, and checkpoint 9  
 Day 15 – Swift review
 
-## Day 1, 2
+## Day 1 - variables, constants, strings, and numbers
+- var : create variable / no need to use var again
+- let : create constant / optimized, safer
+- String : `\"` for double quotes, `"""` for multi lines, `.count`, `.uppercased()`, `.hasPrefix()`, `.hasSuffix()`
+- Int : `_` is ignored, `+=, -=, *=, /=` adds number to itself, `.isMultiple(of:)`
+- Double : `0.1 + 0.2 = 0.30000..4`because computers use binary to store Double
+- Type-safe language : cannot change its type
+
+## Day 2 - Booleans, string interpolation, and checkpoint 1
+- `hasSuffix(), isMultiple(of:)` return Boolean type
+- `!` operator to flip Bool value = `toggle()`
+- Join Strings with `+`, `\(constant)` to use constant in String
+- can put calculations inside string interpolation `"\(5 * 5)"`
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/115053126/225030314-be4d0bde-b6f2-41a8-a311-f0fd11aeed11.png">
 
 ## Day 3, 4
