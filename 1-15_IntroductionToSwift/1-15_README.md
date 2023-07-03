@@ -30,7 +30,24 @@ Day 15 – Swift review
 - can put calculations inside string interpolation `"\(5 * 5)"`
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/115053126/225030314-be4d0bde-b6f2-41a8-a311-f0fd11aeed11.png">
 
-## Day 3, 4
+## Day 3 - Arrays, dictionaries, sets, and enums
+Collections of data
+- Array : group datas, access the value with index(`beatles[0]`)  
+To make : `Array<String>(), [Array](), [1, 2, 3]`  
+`.append, .count, .contains(), .sorted(), .reversed()`
+- Dictionary : store items with keys  
+To make : `let me = ["name": "Marcus", "location": "Korea"]` or `[String: Int]()`  
+To access : `me["name"]` -> optional value. or `me["name", default: "Unknown"]`
+- Set : fast data lookup, print in random order  
+To make : `Set<String>(), Set(["apple", "banana", "melon"])`  
+`contains()` <- very fast, `.insert(), .count, .sorted`
+- Enum : set of named value, efficient and safe, saves in optimized form(using Int instead of letters)  
+To make : `enum Weekday { case monday, tuesday }`  
+To access : `Weekday.monday`, once assigned : can just put `.tuesday`
+
+## Day 4 – type annotations and checkpoint 2
+
+
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/115053126/225328830-c07a2ba7-ed97-44bd-946e-ca839761bc1d.png">
 
 ## Day 5, 6
