@@ -46,8 +46,13 @@ To make : `enum Weekday { case monday, tuesday }`
 To access : `Weekday.monday`, once assigned : can just put `.tuesday`
 
 ## Day 4 – type annotations and checkpoint 2
-
-
+- Type inference : Swift infers type by its value. `var name = "Marcus"`
+- Type annotation : We assign type explicitly. `var num: Double = 0`  
+- - when Swift can't figure out what type should be used
+- - when we want Swift to use a different type than its default
+- - when we don't want to assign a value yet
+- String, Int, Double, Bool, Array`[String]`, Dictionary`[String: Int]`, Set`Set<String>`, Enum
+- Empty collection types are used because you don't know your data yet
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/115053126/225328830-c07a2ba7-ed97-44bd-946e-ca839761bc1d.png">
 
 ## Day 5, 6
