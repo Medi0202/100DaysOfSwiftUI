@@ -56,11 +56,23 @@ To access : `Weekday.monday`, once assigned : can just put `.tuesday`
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/115053126/225328830-c07a2ba7-ed97-44bd-946e-ca839761bc1d.png">
 
 ## Day 5 – if, switch, and the ternary operator
+### if, else, logical operator
 - if someCondition { }
 - `<, >=` working with String : comparison on alphabetical order
 - Swift has special type for storing `Date`
 - `enum Sizes: Comparable` : Comparable can be used to compare enum case list.
-
+- `== true` can be removed
+- multiple condition : `else if`, `&& ||`(logitcal operator)
+- `(A && B) || C` use parentheses to clarify what we mean
+### switch
+- check individual cases one by one
+- switch statements must be exhaustive (use `default:`)
+- execute the first case that matches, then stop (or use `fallthrough`
+- switch : value will only be read once, if : value will be read multiple times
+- advanced pattern matching, legibility purpose
+### ternary operator
+- WTF : `what` ? `true` : `false`
+- a lot of use in SwiftUI
 ## Day 6 – loops, summary, and checkpoint 3  
 <img width="471" alt="image" src="https://user-images.githubusercontent.com/115053126/225345339-4a1a21a6-d038-40b8-8be1-027c88ca057f.png">
 
