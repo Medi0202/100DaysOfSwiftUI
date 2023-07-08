@@ -74,6 +74,23 @@ To access : `Weekday.monday`, once assigned : can just put `.tuesday`
 - WTF : `what` ? `true` : `false`
 - a lot of use in SwiftUI
 ## Day 6 – loops, summary, and checkpoint 3  
+### loop
+- loop body : code inside `{ }`
+- loop iteration : one cycle through the loop body
+- loop variable : `i` in the loop body, change in the next iteration
+- range operators : `1...5`, `1..<5`, `1...`
+### while
+- useful when we don't know how many times the loop will repeat
+- combine with `.random` ex) `while roll != 20`
+- loop until condition becomes false
+### continue
+- skips the current loop iteration  
+- commonly used near the start of loops to skip the loop variable with `if`
+### break
+- break : skips all remaining iterations
+- exits the loop immediately
+### labeled statements
+- `outerLoop:` ~ `break outerLoop` : breaks out of nested loops
 <img width="471" alt="image" src="https://user-images.githubusercontent.com/115053126/225345339-4a1a21a6-d038-40b8-8be1-027c88ca057f.png">
 
 ## Day 7 – functions, parameters, and return values
