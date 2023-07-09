@@ -116,6 +116,36 @@ To access : `Weekday.monday`, once assigned : can just put `.tuesday`
 - tuple : fixed number of values of fixed types inside
 
 ## Day 8 – default values, throwing functions, and checkpoint 4
+### default values
+- provide default value to function parameter `func calculate(_ num: Int = 1)`
+- focus on the important parts that do need to change regularly
+- `.removeAll(keepingCapacity: true)` removes items in array but keep the memory
+### handling errors
+- define possible errors. ex)`enum PasswordError: Error { case short, obvious }`
+- write a function that checks and throws an error  
+```
+func checkPassword(_ password: String) throws ->
+if password.count < 5 { throw PasswordError.short }
+```
+> - mark the function as **`throws`** before the return type (means it might throw errors)
+- if it throws an error, the function immediately exits & doesn't return
+- if no errors are thrown, the function behave like normal & return
+> - run the function with **`do, try, catch`**
+- `do { try something() } catch { code }`  
+```
+do {
+    let result = try checkPassword("12345")
+    print("Password rating: \(result)")
+} catch {
+    print("There was an error.")
+}
+```
+- `try` must be written before calling functions that might throw errors
+- when using `try`, it must be inside `do` block with one or more `catch`
+- `catch` can catch specific errors `} catch PasswordError.short {`
+- other languages don't need `try`
+- by using `try`, we acknowledge which parts can cause errors
+- useful when we have several throwing and non-throwing functions in a single `do` block
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/115053126/225657526-0fae8b90-5cde-4e3e-a6de-e5ba1101a4ec.png">
 
 ## Day 9 – closures, passing functions into functions, and checkpoint 5
