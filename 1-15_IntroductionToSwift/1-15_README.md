@@ -73,6 +73,7 @@ To access : `Weekday.monday`, once assigned : can just put `.tuesday`
 ### ternary operator
 - WTF : `what` ? `true` : `false`
 - a lot of use in SwiftUI
+
 ## Day 6 – loops, summary, and checkpoint 3  
 ### loop
 - loop body : code inside `{ }`
@@ -94,6 +95,25 @@ To access : `Weekday.monday`, once assigned : can just put `.tuesday`
 <img width="471" alt="image" src="https://user-images.githubusercontent.com/115053126/225345339-4a1a21a6-d038-40b8-8be1-027c88ca057f.png">
 
 ## Day 7 – functions, parameters, and return values
+- `()` to run function
+- paramete/placeholder, argument/actual value
+- data created inside a function is automatically destroyed when finished
+- break up long functions into small (function composition)
+- `inout, &` parameter to change the value  
+`func swap(_ a: inout Int)` , `swap(&num)`
+- generic : `func swap<T>(_ a: inout T)` T, U, V
+- `return` can be removed when only one line of code
+- when function name is a verb & first parameter is a noun the verb is acting on `_`
+### tuples
+- multiple datas into a single variable `(String, Int)`
+- can be named tuples `(name: String, age: Int)` - `person.name`
+- when return, no need to repeat tuple name `("Marcus", 100)`
+- assign multiple constants at once `let (name, age) = getUser()`
+- or single constant from tuple `let (name, _) = getUser()`
+### difference among array, set, tuple
+- array : keep order, can have duplicates
+- set : unordered, can't have duplicates
+- tuple : fixed number of values of fixed types inside
 
 ## Day 8 – default values, throwing functions, and checkpoint 4
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/115053126/225657526-0fae8b90-5cde-4e3e-a6de-e5ba1101a4ec.png">
