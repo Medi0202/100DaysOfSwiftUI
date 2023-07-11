@@ -149,6 +149,22 @@ do {
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/115053126/225657526-0fae8b90-5cde-4e3e-a6de-e5ba1101a4ec.png">
 
 ## Day 9 – closures, passing functions into functions, and checkpoint 5
+- when copying a function, don't write `( )`
+- **closure expression** : skip creating a function, assign the functionality to `var`, `let` 
+- starts and ends with `{ }`, parameter `( )`, `in` to mark the end of parameter
+ ```
+let hello = { (name: String) -> String in
+	"Hi \(name)"
+}
+ ```
+- function is also a type (depends on the data it receives and sends back) `() -> Void`
+- when using a copy of function or closure, don't need **external parameter name** `hello("Marcus")`
+- `sorted(by: )` with custom sorting function :  two strings`(String, String) -> Bool`
+  return true if the first string should be sorted before the second,
+  false if the first string should be sorted after the second
+  `return s1 < s2` : alphabetical order
+-  able to store function and make it run at some point
+- `(user: String) in`, `(user: String) -> Bool in`, `() -> Bool in`
 <img width="605" alt="image" src="https://user-images.githubusercontent.com/115053126/225962175-30ea52ac-4fbe-4dcf-a95c-f1f71ae7884e.png">
 
 ## Day 10 – structs, computed properties, and property observers
