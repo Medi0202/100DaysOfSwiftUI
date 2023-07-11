@@ -149,6 +149,7 @@ do {
 <img width="381" alt="image" src="https://user-images.githubusercontent.com/115053126/225657526-0fae8b90-5cde-4e3e-a6de-e5ba1101a4ec.png">
 
 ## Day 9 – closures, passing functions into functions, and checkpoint 5
+### general
 - when copying a function, don't write `( )`
 - **closure expression** : skip creating a function, assign the functionality to `var`, `let` 
 - starts and ends with `{ }`, parameter `( )`, `in` to mark the end of parameter
@@ -159,12 +160,25 @@ let hello = { (name: String) -> String in
  ```
 - function is also a type (depends on the data it receives and sends back) `() -> Void`
 - when using a copy of function or closure, don't need **external parameter name** `hello("Marcus")`
+### ex) sorted
 - `sorted(by: )` with custom sorting function :  two strings`(String, String) -> Bool`
   return true if the first string should be sorted before the second,
   false if the first string should be sorted after the second
   `return s1 < s2` : alphabetical order
 -  able to store function and make it run at some point
 - `(user: String) in`, `(user: String) -> Bool in`, `() -> Bool in`
+###  trailing closure, shorthand syntax
+```
+let customSort = team.sorted(by: { (name1: String, name2: String) -> Bool in })
+//can be shortened
+let customSort = team.sorted(by: { name1, name2 in })
+//can be shortened again (trailing closure syntax)
+let customSort = team.sorted { name1, name2 in }  // by: REMOVED
+// shorthand syntax
+let customSort = team.sorted { $0 > $1 }  // in REMOVED
+// can use in 'Higher order function' (filter, map, reduce)
+```
+- accept multiple function parameters : end the brace, then parameter name  `} second: {`
 <img width="605" alt="image" src="https://user-images.githubusercontent.com/115053126/225962175-30ea52ac-4fbe-4dcf-a95c-f1f71ae7884e.png">
 
 ## Day 10 – structs, computed properties, and property observers
