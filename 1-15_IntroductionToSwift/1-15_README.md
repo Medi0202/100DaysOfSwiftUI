@@ -182,9 +182,17 @@ let customSort = team.sorted { $0 > $1 }  // in REMOVED
 <img width="605" alt="image" src="https://user-images.githubusercontent.com/115053126/225962175-30ea52ac-4fbe-4dcf-a95c-f1f71ae7884e.png">
 
 ## Day 10 – structs, computed properties, and property observers
-
 <img width="564" alt="image" src="https://user-images.githubusercontent.com/115053126/226087179-815d30ec-3f1d-4581-b30a-3b1ae11dfb77.png">
-
+- create own custom, complex data types with own variables and functions
+- create an instance like calling a function
+- if need to change data in struct, mark `mutating func` keyword
+- constants -> properties, functions -> methods
+- methods can avoid namespace pollution
+### compute property values dynamically
+- stored property : variable or constant that holds data in struct
+- computed property : calculate the value dynamically every time it's accessed
+- getter : code that reads, setter : code that writes
+- `get`, `set` & `newValue`, 
 ## Day 11 – access control, static properties and methods, and checkpoint 6
 <img width="433" alt="image" src="https://user-images.githubusercontent.com/115053126/226088138-69d66559-105c-4012-8515-3b823baf619b.png">
 
