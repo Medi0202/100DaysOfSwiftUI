@@ -188,11 +188,42 @@ let customSort = team.sorted { $0 > $1 }  // in REMOVED
 - if need to change data in struct, mark `mutating func` keyword
 - constants -> properties, functions -> methods
 - methods can avoid namespace pollution
-### compute property values dynamically
+### computed property
 - stored property : variable or constant that holds data in struct
 - computed property : calculate the value dynamically every time it's accessed
 - getter : code that reads, setter : code that writes
-- `get`, `set` & `newValue`, 
+- `get`, `set` & `newValue`
+```
+var vacationRemaining: Int {
+	get {
+		vacationAllocated - vacationTaken
+	}
+
+	set {
+		vacationAllocated = vacationTaken - newValue
+	}
+}
+```
+### property observer
+- property observers : `didSet` & `oldValue`, `willSet` & `newValue`
+- attach observers to properties to take action before or after changes
+```
+var score = 0 {
+	willSet {
+		print("Current score is \(score)")
+		print("New value will be \(newValue)")
+	}
+	didSet {
+		print("Old Value was \(oldValue)")
+		print("Score is now \(score)")
+	}
+}
+```
+### custom initializer
+- memberwise initializer : initializer that accepts each property in order
+- all properties must have a value by the time the initializer ends
+- if a custom initializer is created, memberwise initializer is removed
+  if you want to keep the both, move the custom initializer to an extension
 ## Day 11 – access control, static properties and methods, and checkpoint 6
 <img width="433" alt="image" src="https://user-images.githubusercontent.com/115053126/226088138-69d66559-105c-4012-8515-3b823baf619b.png">
 
