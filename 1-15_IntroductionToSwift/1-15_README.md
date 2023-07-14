@@ -224,7 +224,26 @@ var score = 0 {
 - all properties must have a value by the time the initializer ends
 - if a custom initializer is created, memberwise initializer is removed
   if you want to keep the both, move the custom initializer to an extension
+  
 ## Day 11 – access control, static properties and methods, and checkpoint 6
+### access control
+- some datas must be hidden from external access
+- open > public > internal(default) > file-private > private
+- open : let anyone, anywhere use this + override, subclass // for Class
+- public : let anyone, anywhere use this (outside the module)
+- fileprivate : don't let anything outside the current file use this
+- private : don't let anything outside the struct use this
+	private(set) : let anyone read this, but only let my methods write it
+- if private access control is used, you'll need to create own initializer
+### static properties and methods
+- add a property or method to the struct itself, rather than one particular instance
+- mutating mark is not necessary
+- cannot access non-static code from static code
+- when access static code from non-static code, use the type name or `Self` to refer the current type
+- `self` : current value of the struct, `Self` : current type
+- used to organize common data, common functionality across an entire app
+- used to make an example instance
+- can also use `static` on Enum type
 <img width="433" alt="image" src="https://user-images.githubusercontent.com/115053126/226088138-69d66559-105c-4012-8515-3b823baf619b.png">
 
 ## Day 12 – classes, inheritance, and checkpoint 7
