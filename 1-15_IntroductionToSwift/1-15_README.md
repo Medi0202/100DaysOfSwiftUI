@@ -247,6 +247,21 @@ var score = 0 {
 <img width="433" alt="image" src="https://user-images.githubusercontent.com/115053126/226088138-69d66559-105c-4012-8515-3b823baf619b.png">
 
 ## Day 12 – classes, inheritance, and checkpoint 7
+- can make one class build upon another class -> no memberwise initializer
+- when you copy an instance of a class, both share same data. if one changes, other one also changes too
+  = changes in one screen would automatically update other screens
+  <-> copies of structs are always unique
+- when final copy of instance is destroyed, `deinitializer` can be optionally run
+  <-> not available in structs
+- even if you make a constant Class, its property can be changed as long as it's a variable
+  <-> in constant Sturct, property cannot be changed
+- subclassing is common in UIKit, not much in SwiftUI
+### inheritance
+- inherit functionality from (parent or super) class to new (child or sub) class
+- to inherit `class Developer: Employee`
+- change a method from a parent class using `override`
+- if class should not support inheritance, mark it as `final`
+
 <img width="311" alt="image" src="https://user-images.githubusercontent.com/115053126/226092721-3f621012-714e-4d30-b165-39e2b27c2ef5.png">
 
 ## Day 13 – protocols, extensions, and checkpoint 8  
