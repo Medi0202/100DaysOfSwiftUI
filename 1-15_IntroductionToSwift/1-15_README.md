@@ -261,7 +261,36 @@ var score = 0 {
 - to inherit `class Developer: Employee`
 - change a method from a parent class using `override`
 - if class should not support inheritance, mark it as `final`
-
+### initializer
+- if a child class has any custom initializers, it must call parent's initializer after setting up its own properties
+- `super` to call up to methods that belongs to the parent class
+```
+init(isElectric: Bool, isConvertible: Bool) {
+	self.isConvertible = isConvertible
+	super.init(isElectric: isElectric)
+}
+```
+### copying classes
+- class = reference type, instances share the same data (struct = value type)
+- SwiftUI relies on classes for its data because they can be shared easily
+- to create a unique copy(deep copy), create a new instance and copy data
+```
+func copy() -> User {
+	let user = User()
+	user.username = username
+	return user
+}
+```
+### deinitializer
+- does not take parameters or return data
+- automatically be called when the final copy is destroyed
+- struct don't have deinitializers because it can't be copied
+- when the last constant or variable pointing at a class instance is destroyed (from scope)
+- ARC(automatic reference counting) reaches 0 -> call deinitializer
+### variables inside classes
+- constant class & variable property : property can be changed
+- constant struct & variable property : property cannot be changed
+- classes don't need to use the `mutating` 
 <img width="311" alt="image" src="https://user-images.githubusercontent.com/115053126/226092721-3f621012-714e-4d30-b165-39e2b27c2ef5.png">
 
 ## Day 13 – protocols, extensions, and checkpoint 8  
