@@ -294,5 +294,21 @@ func copy() -> User {
 <img width="311" alt="image" src="https://user-images.githubusercontent.com/115053126/226092721-3f621012-714e-4d30-b165-39e2b27c2ef5.png">
 
 ## Day 13 – protocols, extensions, and checkpoint 8  
+- Protocols define a series of properties and methods that we want to use
+- Protocol itself doesn't implement those properties and methods
+- specifies the method names, parameters, and return types (but no function bodies)
+- can use protocol as the type of parameter
+- functionality that we want to work with, rather than exact types
+- protocols can describe properties & list whether it's readable and/or writeable
+```
+protocol Vehicle {
+	var name: String { get }
+	var currentPassengers: Int { get set }
+	func estimateTime(for distance: Int) -> Int
+	func travel(distance: Int)
+}
+```
+- allow us to treat our data in more general terms
+
 ## Day 14 – optionals, nil coalescing, and checkpoint 9  
 ## Day 15 – Swift review
