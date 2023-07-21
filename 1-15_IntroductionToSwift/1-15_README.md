@@ -309,6 +309,14 @@ protocol Vehicle {
 }
 ```
 - allow us to treat our data in more general terms
+### opaque return type
+- returning a protocol is useful because it can hide information, focus on the functionality
+- `func getRandomNumber() -> Int {`, `func getRandomBool() -> Bool {`
+  Int and Bool conform to a Swift protocol `Equatable`(can be compared for equality)
+  but they are not interchangeable
+- opaque return type : hide information in code, but not from the compiler
+  `func getRandomNumber() -> some Equatable {`, `func getRandomBool() -> some Equatable {`
+- `some View` : specific sort of `View` type but we don't want to say which one
 
 ## Day 14 – optionals, nil coalescing, and checkpoint 9  
 ## Day 15 – Swift review
